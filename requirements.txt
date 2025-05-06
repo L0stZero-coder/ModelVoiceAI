@@ -1,0 +1,2 @@
+.NET SDK 6.0 or later
+Microsoft.CognitiveServices.Speech >= 1.36.0
