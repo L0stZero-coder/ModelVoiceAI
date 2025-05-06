@@ -53,13 +53,13 @@ dotnet run
 
 -> Project Structure
 ModelVoiceAI/
-├── Program.cs                 // Main entry point
-├── Model.cs               	   // AI behavior & emotional logic
-├── Permissions.cs            // Controls data/emotion access
-├── EmotionVoiceProfile.cs    // Defines emotion tuning profiles
-├── MemoryDatabase.cs         // Mock data to infer emotion
-├── TextToSpeechEngine.cs     // Azure TTS integration
-├── ModelVoiceAI.csproj       // Project config with dependencies
+├── Program.cs                
+├── Model.cs               	 
+├── Permissions.cs            
+├── EmotionVoiceProfile.cs  
+├── MemoryDatabase.cs  
+├── TextToSpeechEngine.cs   
+├── ModelVoiceAI.csproj
 
 -> Technologies Used
 C# 10 / .NET 6.0
