@@ -39,7 +39,7 @@ Azure Cognitive Services Speech Resource
 bash
 Copy
 Edit
-git clone https://github.com/yourusername/ModelVoiceAI.git
+git clone https://github.com/L0st-Zero-coder/ModelVoiceAI.git
 cd ModelVoiceAI
 
 -> Edit TextToSpeechEngine.cs:
