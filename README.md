@@ -1,57 +1,77 @@
-ModelVoiceAI is a C# .NET 6.0 console application that empowers a virtual AI persona (referred to as Model) to express human-like emotions using Azure Text-to-Speech (TTS). This project combines voice synthesis, emotional inference from contextual memory, and permission-based control to create emotionally expressive AI speech.
+# 🗣️ ModelVoiceAI
 
--> Features
-✅ Emotion-driven voice modulation (pitch, speed, volume)
+**ModelVoiceAI** is a C# .NET 6.0 console application designed to bring emotionally expressive voice output to a virtual AI persona named *Model*. By integrating Azure Text-to-Speech (TTS), contextual memory, and a permission system, the application enables dynamic and human-like emotional speech synthesis.
 
-✅ Integration with Azure TTS using SSML and express-as emotion styles
+---
 
-✅ Mock memory database for simulating AI "collected data"
+## 🎯 Features
 
-✅ Permission system to control emotional expression and data access
+- ✅ Emotion-driven voice modulation (pitch, rate, volume)
+- ✅ Azure TTS integration with SSML and `express-as` emotion styles
+- ✅ Mock memory database simulating contextual data influence
+- ✅ Permission-based control of emotional and memory expression
+- ✅ Clean, modular architecture with separate logic layers
 
-✅ Modular architecture (separate classes for TTS, memory, permissions, and logic)
+---
 
--> Supported Emotions
-Model can speak with the following emotional styles, automatically inferred from memory:
+## 😊 Supported Emotions
 
-Happy
-Sad
-Angry
-Excited
-Calm
-Neutral
+Model can express the following emotions, inferred automatically from memory context:
 
-Voice parameters (pitch/speed/volume) and Azure SSML express-as tags are used to shape each emotional voice.
+- Happy
+- Sad
+- Angry
+- Excited
+- Calm
+- Neutral
 
-Example Behavior
+Each emotion uses specific SSML voice tags and custom voice modulation (pitch, speed, volume).
 
--> If the memory contains:
-"User said they are sad today"
-Then Model will respond using a sad voice with lowered pitch and slower rate.
+### 🧠 Example Behavior
 
--> Setup Instructions
-1. Prerequisites
-.NET 6 SDK
+If memory includes:  
+`"User said they are sad today"`  
+Then the AI will respond in a **sad** voice, using **lower pitch** and **slower rate**.
 
-Azure Cognitive Services Speech Resource
+---
 
-2. Clone and Configure
-bash
-Copy
-Edit
+## ⚙️ Setup Instructions
+
+### 1. Prerequisites
+
+- [.NET 6 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
+- [Azure Cognitive Services Speech Resource](https://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/quickstarts)
+
+### 2. Clone and Configure
+
+```bash
 git clone https://github.com/L0st-Zero-coder/ModelVoiceAI.git
 cd ModelVoiceAI
+```
 
--> Edit TextToSpeechEngine.cs:
+### 3. Configure Azure Credentials
+
+Open `TextToSpeechEngine.cs` and update:
+
+```csharp
 private const string subscriptionKey = "YourSubscriptionKey";
 private const string region = "YourRegion";
-Replace with your actual Azure credentials.
+```
 
-4. Build and Run
+Replace with your actual Azure Speech API key and region.
+
+### 4. Build and Run
+
+```bash
 dotnet restore
 dotnet run
+```
 
--> Project Structure
+---
+
+## 📁 Project Structure
+
+```
 ModelVoiceAI/
 ├── Program.cs                
 ├── Model.cs               	 
@@ -60,11 +80,24 @@ ModelVoiceAI/
 ├── MemoryDatabase.cs  
 ├── TextToSpeechEngine.cs   
 ├── ModelVoiceAI.csproj
+```
 
--> Technologies Used
-C# 10 / .NET 6.0
+---
 
-Azure Cognitive Services Speech SDK
+## 🛠️ Technologies Used
 
-SSML (Speech Synthesis Markup Language)
+- C# 10 / .NET 6.0  
+- Azure Cognitive Services Speech SDK  
+- SSML (Speech Synthesis Markup Language)
 
+---
+
+## 📄 License
+
+This project is open for educational and experimental use. License to be defined.
+
+---
+
+## 🙌 Contributions
+
+Feel free to fork the repository and submit pull requests for improvements or new features. Collaboration is welcome!
